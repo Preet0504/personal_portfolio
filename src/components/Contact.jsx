@@ -86,11 +86,11 @@ const Contact = () => {
   return (
     <div
       ref={ref}
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden relative z-0`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 hover:border-purple-500/60 p-8 rounded-2xl w-full transition-all'
+        className='flex-[0.75] bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 hover:border-purple-500/60 p-8 rounded-2xl w-full transition-all relative z-10'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>
