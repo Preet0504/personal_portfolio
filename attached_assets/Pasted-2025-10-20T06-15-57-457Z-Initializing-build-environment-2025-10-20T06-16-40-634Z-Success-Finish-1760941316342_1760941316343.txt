@@ -1,0 +1,227 @@
+2025-10-20T06:15:57.457Z	Initializing build environment...
+2025-10-20T06:16:40.634Z	Success: Finished initializing build environment
+2025-10-20T06:16:41.523Z	Cloning repository...
+2025-10-20T06:16:44.045Z	Restoring from dependencies cache
+2025-10-20T06:16:44.046Z	Restoring from build output cache
+2025-10-20T06:16:44.049Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-10-20T06:16:44.367Z	Installing project dependencies: npm clean-install --progress=false
+2025-10-20T06:16:45.352Z	npm warn ERESOLVE overriding peer dependency
+2025-10-20T06:16:45.352Z	npm warn While resolving: @monogrid/gainmap-js@3.1.0
+2025-10-20T06:16:45.352Z	npm warn Found: three@0.149.0
+2025-10-20T06:16:45.352Z	npm warn node_modules/three
+2025-10-20T06:16:45.352Z	npm warn   three@"^0.149.0" from the root project
+2025-10-20T06:16:45.352Z	npm warn   10 more (@react-spring/three, @react-three/drei, maath, ...)
+2025-10-20T06:16:45.352Z	npm warn
+2025-10-20T06:16:45.352Z	npm warn Could not resolve dependency:
+2025-10-20T06:16:45.352Z	npm warn peer three@">= 0.159.0" from @monogrid/gainmap-js@3.1.0
+2025-10-20T06:16:45.352Z	npm warn node_modules/@react-three/drei/node_modules/@monogrid/gainmap-js
+2025-10-20T06:16:45.352Z	npm warn   @monogrid/gainmap-js@"^3.0.6" from @react-three/drei@9.122.0
+2025-10-20T06:16:45.352Z	npm warn   node_modules/@react-three/drei
+2025-10-20T06:16:45.353Z	npm warn
+2025-10-20T06:16:45.353Z	npm warn Conflicting peer dependency: three@0.180.0
+2025-10-20T06:16:45.353Z	npm warn node_modules/three
+2025-10-20T06:16:45.353Z	npm warn   peer three@">= 0.159.0" from @monogrid/gainmap-js@3.1.0
+2025-10-20T06:16:45.353Z	npm warn   node_modules/@react-three/drei/node_modules/@monogrid/gainmap-js
+2025-10-20T06:16:45.353Z	npm warn     @monogrid/gainmap-js@"^3.0.6" from @react-three/drei@9.122.0
+2025-10-20T06:16:45.354Z	npm warn     node_modules/@react-three/drei
+2025-10-20T06:16:45.369Z	npm warn ERESOLVE overriding peer dependency
+2025-10-20T06:16:45.369Z	npm warn While resolving: three-mesh-bvh@0.7.8
+2025-10-20T06:16:45.369Z	npm warn Found: three@0.149.0
+2025-10-20T06:16:45.370Z	npm warn node_modules/three
+2025-10-20T06:16:45.370Z	npm warn   three@"^0.149.0" from the root project
+2025-10-20T06:16:45.370Z	npm warn   10 more (@react-spring/three, @react-three/drei, maath, ...)
+2025-10-20T06:16:45.370Z	npm warn
+2025-10-20T06:16:45.370Z	npm warn Could not resolve dependency:
+2025-10-20T06:16:45.370Z	npm warn peer three@">= 0.151.0" from three-mesh-bvh@0.7.8
+2025-10-20T06:16:45.370Z	npm warn node_modules/@react-three/drei/node_modules/three-mesh-bvh
+2025-10-20T06:16:45.370Z	npm warn   three-mesh-bvh@"^0.7.8" from @react-three/drei@9.122.0
+2025-10-20T06:16:45.370Z	npm warn   node_modules/@react-three/drei
+2025-10-20T06:16:45.370Z	npm warn
+2025-10-20T06:16:45.370Z	npm warn Conflicting peer dependency: three@0.180.0
+2025-10-20T06:16:45.370Z	npm warn node_modules/three
+2025-10-20T06:16:45.371Z	npm warn   peer three@">= 0.151.0" from three-mesh-bvh@0.7.8
+2025-10-20T06:16:45.371Z	npm warn   node_modules/@react-three/drei/node_modules/three-mesh-bvh
+2025-10-20T06:16:45.371Z	npm warn     three-mesh-bvh@"^0.7.8" from @react-three/drei@9.122.0
+2025-10-20T06:16:45.371Z	npm warn     node_modules/@react-three/drei
+2025-10-20T06:16:47.698Z	npm warn deprecated three-mesh-bvh@0.7.8: Deprecated due to three.js version incompatibility. Please use v0.8.0, instead.
+2025-10-20T06:16:49.718Z	
+2025-10-20T06:16:49.718Z	added 230 packages, and audited 231 packages in 5s
+2025-10-20T06:16:49.719Z	
+2025-10-20T06:16:49.719Z	25 packages are looking for funding
+2025-10-20T06:16:49.719Z	  run `npm fund` for details
+2025-10-20T06:16:49.719Z	
+2025-10-20T06:16:49.719Z	found 0 vulnerabilities
+2025-10-20T06:16:49.784Z	Executing user build command: npm run build
+2025-10-20T06:16:49.987Z	
+2025-10-20T06:16:49.987Z	> 3dfolio@0.0.0 build
+2025-10-20T06:16:49.987Z	> vite build
+2025-10-20T06:16:49.987Z	
+2025-10-20T06:16:50.224Z	vite v7.1.10 building for production...
+2025-10-20T06:16:50.306Z	transforming...
+2025-10-20T06:16:50.944Z	
+2025-10-20T06:16:50.947Z	/src/assets/herobg.png referenced in /src/assets/herobg.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+2025-10-20T06:16:54.332Z	node_modules/@react-three/drei/node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js (6:26): "BatchedMesh" is not exported by "node_modules/three/build/three.module.js", imported by "node_modules/@react-three/drei/node_modules/three-mesh-bvh/src/utils/ExtensionUtilities.js".
+2025-10-20T06:16:55.754Z	✓ 935 modules transformed.
+2025-10-20T06:16:56.393Z	rendering chunks...
+2025-10-20T06:16:56.734Z	[plugin vite:reporter] 
+2025-10-20T06:16:56.734Z	(!) /opt/buildhome/repo/src/components/Contact.jsx is dynamically imported by /opt/buildhome/repo/src/App.jsx but also statically imported by /opt/buildhome/repo/src/components/index.js, dynamic import will not move module into another chunk.
+2025-10-20T06:16:56.735Z	
+2025-10-20T06:17:01.981Z	computing gzip size...
+2025-10-20T06:17:02.010Z	dist/index.html                             2.71 kB │ gzip:   0.92 kB
+2025-10-20T06:17:02.011Z	dist/assets/index-CLWzNodA.css             26.87 kB │ gzip:   5.74 kB
+2025-10-20T06:17:02.012Z	dist/assets/Loader-Ca86Xk7N.js              0.43 kB │ gzip:   0.33 kB
+2025-10-20T06:17:02.012Z	dist/assets/SafeCanvas-BX4r6x45.js          0.65 kB │ gzip:   0.43 kB
+2025-10-20T06:17:02.012Z	dist/assets/Earth-qPrcwQrU.js               0.90 kB │ gzip:   0.52 kB
+2025-10-20T06:17:02.012Z	dist/assets/Stars-DzKRJnPu.js               0.99 kB │ gzip:   0.55 kB
+2025-10-20T06:17:02.012Z	dist/assets/Experience-DL-UoEDA.js          1.85 kB │ gzip:   0.89 kB
+2025-10-20T06:17:02.012Z	dist/assets/Volunteering-CnT6z_-M.js        1.87 kB │ gzip:   0.89 kB
+2025-10-20T06:17:02.012Z	dist/assets/Tech-BzNAB75m.js                2.19 kB │ gzip:   1.04 kB
+2025-10-20T06:17:02.012Z	dist/assets/Works-BxcgTTYz.js               2.81 kB │ gzip:   1.27 kB
+2025-10-20T06:17:02.013Z	dist/assets/index-CywbnaPd.js              26.87 kB │ gzip:  10.37 kB
+2025-10-20T06:17:02.013Z	dist/assets/animation-vendor-BlVpIl1M.js  102.52 kB │ gzip:  33.37 kB
+2025-10-20T06:17:02.013Z	dist/assets/react-vendor-B4yyYlwV.js      151.12 kB │ gzip:  49.23 kB
+2025-10-20T06:17:02.013Z	dist/assets/three-vendor-Brv9I8q4.js      825.38 kB │ gzip: 222.18 kB
+2025-10-20T06:17:02.013Z	✓ built in 11.76s
+2025-10-20T06:17:02.129Z	Success: Build command completed
+2025-10-20T06:17:02.131Z	Executing user deploy command: npx wrangler deploy
+2025-10-20T06:17:03.003Z	npm warn exec The following package was not found and will be installed: wrangler@4.43.0
+2025-10-20T06:17:15.441Z	
+2025-10-20T06:17:15.442Z	 ⛅️ wrangler 4.43.0
+2025-10-20T06:17:15.442Z	───────────────────
+2025-10-20T06:17:19.106Z	▲ [WARNING] "import.meta" is not available with the "iife" output format and will be empty [empty-import-meta]
+2025-10-20T06:17:19.106Z	
+2025-10-20T06:17:19.106Z	    src/components/Contact.jsx:37:8:
+2025-10-20T06:17:19.106Z	      37 │         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+2025-10-20T06:17:19.106Z	         ╵         ~~~~~~~~~~~
+2025-10-20T06:17:19.106Z	
+2025-10-20T06:17:19.106Z	  You need to set the output format to "esm" for "import.meta" to work correctly.
+2025-10-20T06:17:19.106Z	
+2025-10-20T06:17:19.106Z	
+2025-10-20T06:17:19.106Z	▲ [WARNING] "import.meta" is not available with the "iife" output format and will be empty [empty-import-meta]
+2025-10-20T06:17:19.107Z	
+2025-10-20T06:17:19.107Z	    src/components/Contact.jsx:38:8:
+2025-10-20T06:17:19.107Z	      38 │         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+2025-10-20T06:17:19.107Z	         ╵         ~~~~~~~~~~~
+2025-10-20T06:17:19.107Z	
+2025-10-20T06:17:19.107Z	  You need to set the output format to "esm" for "import.meta" to work correctly.
+2025-10-20T06:17:19.107Z	
+2025-10-20T06:17:19.107Z	
+2025-10-20T06:17:19.107Z	▲ [WARNING] "import.meta" is not available with the "iife" output format and will be empty [empty-import-meta]
+2025-10-20T06:17:19.107Z	
+2025-10-20T06:17:19.107Z	    src/components/Contact.jsx:46:8:
+2025-10-20T06:17:19.108Z	      46 │         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+2025-10-20T06:17:19.108Z	         ╵         ~~~~~~~~~~~
+2025-10-20T06:17:19.108Z	
+2025-10-20T06:17:19.108Z	  You need to set the output format to "esm" for "import.meta" to work correctly.
+2025-10-20T06:17:19.109Z	
+2025-10-20T06:17:19.109Z	
+2025-10-20T06:17:20.588Z	Fetching list of already uploaded assets...
+2025-10-20T06:17:21.096Z	Building list of assets to upload...
+2025-10-20T06:17:21.097Z	 + assets/Earth-qPrcwQrU.c2e91fe7a8.js (uploading new version of assets/Earth-qPrcwQrU.js)
+2025-10-20T06:17:21.098Z	 + assets/Experience-DL-UoEDA.b3c93e146f.js (uploading new version of assets/Experience-DL-UoEDA.js)
+2025-10-20T06:17:21.098Z	 + assets/Loader-Ca86Xk7N.6af851b09e.js (uploading new version of assets/Loader-Ca86Xk7N.js)
+2025-10-20T06:17:21.101Z	 + assets/SafeCanvas-BX4r6x45.a79bc507c0.js (uploading new version of assets/SafeCanvas-BX4r6x45.js)
+2025-10-20T06:17:21.102Z	 + assets/Stars-DzKRJnPu.a3f9d9b7f1.js (uploading new version of assets/Stars-DzKRJnPu.js)
+2025-10-20T06:17:21.105Z	 + assets/Tech-BzNAB75m.423b253663.js (uploading new version of assets/Tech-BzNAB75m.js)
+2025-10-20T06:17:21.106Z	 + assets/Volunteering-CnT6z_-M.17bee2d5bb.js (uploading new version of assets/Volunteering-CnT6z_-M.js)
+2025-10-20T06:17:21.106Z	 + assets/Works-BxcgTTYz.8d80810c9a.js (uploading new version of assets/Works-BxcgTTYz.js)
+2025-10-20T06:17:21.107Z	 = assets/animation-vendor-BlVpIl1M.17097d1d69.js (already uploaded assets/animation-vendor-BlVpIl1M.js)
+2025-10-20T06:17:21.108Z	 + assets/index-CLWzNodA.ba3e8b0d5f.css (uploading new version of assets/index-CLWzNodA.css)
+2025-10-20T06:17:21.108Z	 + assets/index-CywbnaPd.16370f0e69.js (uploading new version of assets/index-CywbnaPd.js)
+2025-10-20T06:17:21.109Z	 = assets/react-vendor-B4yyYlwV.f079b0f166.js (already uploaded assets/react-vendor-B4yyYlwV.js)
+2025-10-20T06:17:21.117Z	 = assets/three-vendor-Brv9I8q4.224fa8b57d.js (already uploaded assets/three-vendor-Brv9I8q4.js)
+2025-10-20T06:17:21.118Z	 = desktop_pc/license.f65a7d6d5c.txt (already uploaded desktop_pc/license.txt)
+2025-10-20T06:17:21.147Z	 = desktop_pc/scene.cf4b3e8c38.bin (already uploaded desktop_pc/scene.bin)
+2025-10-20T06:17:21.156Z	 = desktop_pc/scene.682c0a1828.gltf (already uploaded desktop_pc/scene.gltf)
+2025-10-20T06:17:21.156Z	 = desktop_pc/textures/Material.002_baseColor.3b92a309db.png (already uploaded desktop_pc/textures/Material.002_baseColor.png)
+2025-10-20T06:17:21.157Z	 = desktop_pc/textures/Material.023_baseColor.c9b0543e11.jpeg (already uploaded desktop_pc/textures/Material.023_baseColor.jpeg)
+2025-10-20T06:17:21.161Z	 = desktop_pc/textures/Material.024_baseColor.cf09c965ed.jpeg (already uploaded desktop_pc/textures/Material.024_baseColor.jpeg)
+2025-10-20T06:17:21.162Z	 = desktop_pc/textures/Material.074_0_baseColor.9b8a6ae2a3.png (already uploaded desktop_pc/textures/Material.074_0_baseColor.png)
+2025-10-20T06:17:21.162Z	 = desktop_pc/textures/Material.074_10_baseColor.a4c1565202.jpeg (already uploaded desktop_pc/textures/Material.074_10_baseColor.jpeg)
+2025-10-20T06:17:21.167Z	 = desktop_pc/textures/Material.074_11_baseColor.c489f86833.png (already uploaded desktop_pc/textures/Material.074_11_baseColor.png)
+2025-10-20T06:17:21.168Z	 = desktop_pc/textures/Material.074_12_baseColor.3e105628b4.jpeg (already uploaded desktop_pc/textures/Material.074_12_baseColor.jpeg)
+2025-10-20T06:17:21.169Z	 = desktop_pc/textures/Material.074_13_baseColor.aa082f82c7.png (already uploaded desktop_pc/textures/Material.074_13_baseColor.png)
+2025-10-20T06:17:21.169Z	 = desktop_pc/textures/Material.074_14_baseColor.51b4d33a26.png (already uploaded desktop_pc/textures/Material.074_14_baseColor.png)
+2025-10-20T06:17:21.170Z	 = desktop_pc/textures/Material.074_15_baseColor.710fd1680f.png (already uploaded desktop_pc/textures/Material.074_15_baseColor.png)
+2025-10-20T06:17:21.171Z	 = desktop_pc/textures/Material.074_16_baseColor.490e4fc526.png (already uploaded desktop_pc/textures/Material.074_16_baseColor.png)
+2025-10-20T06:17:21.173Z	 = desktop_pc/textures/Material.074_17_baseColor.f8ac225fbb.png (already uploaded desktop_pc/textures/Material.074_17_baseColor.png)
+2025-10-20T06:17:21.174Z	 = desktop_pc/textures/Material.074_18_baseColor.91ae9a9d88.png (already uploaded desktop_pc/textures/Material.074_18_baseColor.png)
+2025-10-20T06:17:21.175Z	 = desktop_pc/textures/Material.074_18_emissive.8f82888bda.png (already uploaded desktop_pc/textures/Material.074_18_emissive.png)
+2025-10-20T06:17:21.175Z	 = desktop_pc/textures/Material.074_19_baseColor.d01d17d677.png (already uploaded desktop_pc/textures/Material.074_19_baseColor.png)
+2025-10-20T06:17:21.176Z	 = desktop_pc/textures/Material.074_1_baseColor.f0c5d50f8c.jpeg (already uploaded desktop_pc/textures/Material.074_1_baseColor.jpeg)
+2025-10-20T06:17:21.176Z	 = desktop_pc/textures/Material.074_20_baseColor.3902ad868f.png (already uploaded desktop_pc/textures/Material.074_20_baseColor.png)
+2025-10-20T06:17:21.177Z	 = desktop_pc/textures/Material.074_21_baseColor.aec795233a.png (already uploaded desktop_pc/textures/Material.074_21_baseColor.png)
+2025-10-20T06:17:21.178Z	 = desktop_pc/textures/Material.074_22_baseColor.87bedd6d5c.png (already uploaded desktop_pc/textures/Material.074_22_baseColor.png)
+2025-10-20T06:17:21.180Z	 = desktop_pc/textures/Material.074_23_baseColor.93b54b0524.png (already uploaded desktop_pc/textures/Material.074_23_baseColor.png)
+2025-10-20T06:17:21.180Z	 = desktop_pc/textures/Material.074_24_baseColor.33f405ef72.png (already uploaded desktop_pc/textures/Material.074_24_baseColor.png)
+2025-10-20T06:17:21.180Z	 = desktop_pc/textures/Material.074_24_emissive.57ab69dd33.png (already uploaded desktop_pc/textures/Material.074_24_emissive.png)
+2025-10-20T06:17:21.190Z	 = desktop_pc/textures/Material.074_25_baseColor.ccb6d5edac.jpeg (already uploaded desktop_pc/textures/Material.074_25_baseColor.jpeg)
+2025-10-20T06:17:21.191Z	 = desktop_pc/textures/Material.074_26_baseColor.dd1f4f15e5.png (already uploaded desktop_pc/textures/Material.074_26_baseColor.png)
+2025-10-20T06:17:21.192Z	 = desktop_pc/textures/Material.074_27_baseColor.99b87e41f0.png (already uploaded desktop_pc/textures/Material.074_27_baseColor.png)
+2025-10-20T06:17:21.193Z	 = desktop_pc/textures/Material.074_27_emissive.a925400f2a.png (already uploaded desktop_pc/textures/Material.074_27_emissive.png)
+2025-10-20T06:17:21.193Z	 = desktop_pc/textures/Material.074_28_baseColor.ce2d27b031.png (already uploaded desktop_pc/textures/Material.074_28_baseColor.png)
+2025-10-20T06:17:21.194Z	 = desktop_pc/textures/Material.074_29_baseColor.059cdee177.png (already uploaded desktop_pc/textures/Material.074_29_baseColor.png)
+2025-10-20T06:17:21.195Z	 = desktop_pc/textures/Material.074_2_baseColor.526a1312e8.jpeg (already uploaded desktop_pc/textures/Material.074_2_baseColor.jpeg)
+2025-10-20T06:17:21.197Z	 = desktop_pc/textures/Material.074_30_baseColor.29a8e6b4f1.png (already uploaded desktop_pc/textures/Material.074_30_baseColor.png)
+2025-10-20T06:17:21.197Z	 = desktop_pc/textures/Material.074_31_baseColor.b0e01a80e5.png (already uploaded desktop_pc/textures/Material.074_31_baseColor.png)
+2025-10-20T06:17:21.198Z	 = desktop_pc/textures/Material.074_32_baseColor.ede7dc7979.jpeg (already uploaded desktop_pc/textures/Material.074_32_baseColor.jpeg)
+2025-10-20T06:17:21.198Z	 = desktop_pc/textures/Material.074_33_baseColor.c3d38ce706.png (already uploaded desktop_pc/textures/Material.074_33_baseColor.png)
+2025-10-20T06:17:21.199Z	 = desktop_pc/textures/Material.074_34_baseColor.89008df964.jpeg (already uploaded desktop_pc/textures/Material.074_34_baseColor.jpeg)
+2025-10-20T06:17:21.199Z	 = desktop_pc/textures/Material.074_35_baseColor.2e9055be05.png (already uploaded desktop_pc/textures/Material.074_35_baseColor.png)
+2025-10-20T06:17:21.199Z	 = desktop_pc/textures/Material.074_36_baseColor.ed25883bce.jpeg (already uploaded desktop_pc/textures/Material.074_36_baseColor.jpeg)
+2025-10-20T06:17:21.200Z	 = desktop_pc/textures/Material.074_39_baseColor.6e0a3dcfcc.jpeg (already uploaded desktop_pc/textures/Material.074_39_baseColor.jpeg)
+2025-10-20T06:17:21.201Z	 = desktop_pc/textures/Material.074_3_baseColor.dcf8badee7.png (already uploaded desktop_pc/textures/Material.074_3_baseColor.png)
+2025-10-20T06:17:21.201Z	 = desktop_pc/textures/Material.074_40_baseColor.b167887335.png (already uploaded desktop_pc/textures/Material.074_40_baseColor.png)
+2025-10-20T06:17:21.202Z	 = desktop_pc/textures/Material.074_4_baseColor.30ccc41e68.png (already uploaded desktop_pc/textures/Material.074_4_baseColor.png)
+2025-10-20T06:17:21.202Z	 = desktop_pc/textures/Material.074_4_emissive.c08f14d333.png (already uploaded desktop_pc/textures/Material.074_4_emissive.png)
+2025-10-20T06:17:21.203Z	 = desktop_pc/textures/Material.074_5_baseColor.410d210a36.png (already uploaded desktop_pc/textures/Material.074_5_baseColor.png)
+2025-10-20T06:17:21.204Z	 = desktop_pc/textures/Material.074_6_baseColor.720c104059.png (already uploaded desktop_pc/textures/Material.074_6_baseColor.png)
+2025-10-20T06:17:21.204Z	 = desktop_pc/textures/Material.074_7_baseColor.f7f41134b3.png (already uploaded desktop_pc/textures/Material.074_7_baseColor.png)
+2025-10-20T06:17:21.205Z	 = desktop_pc/textures/Material.074_8_baseColor.fcd71eaab4.png (already uploaded desktop_pc/textures/Material.074_8_baseColor.png)
+2025-10-20T06:17:21.205Z	 = desktop_pc/textures/Material.074_9_baseColor.a288401fbb.png (already uploaded desktop_pc/textures/Material.074_9_baseColor.png)
+2025-10-20T06:17:21.205Z	 = desktop_pc/textures/Material.074_9_emissive.8b5c3c232b.png (already uploaded desktop_pc/textures/Material.074_9_emissive.png)
+2025-10-20T06:17:21.209Z	 = desktop_pc/textures/Material.074_baseColor.f03aecc7cc.png (already uploaded desktop_pc/textures/Material.074_baseColor.png)
+2025-10-20T06:17:21.249Z	 = desktop_pc/textures/Material_baseColor.ea519cced3.jpeg (already uploaded desktop_pc/textures/Material_baseColor.jpeg)
+2025-10-20T06:17:21.258Z	 = desktop_pc/textures/Material_metallicRoughness.41f3ae7aee.png (already uploaded desktop_pc/textures/Material_metallicRoughness.png)
+2025-10-20T06:17:21.258Z	 = desktop_pc/textures/Tasten_2_baseColor.13bc914cd3.jpeg (already uploaded desktop_pc/textures/Tasten_2_baseColor.jpeg)
+2025-10-20T06:17:21.261Z	 = herobg.f1f47a4501.png (already uploaded herobg.png)
+2025-10-20T06:17:21.262Z	 + index.7c7646a1c0.html (uploading new version of index.html)
+2025-10-20T06:17:21.262Z	 = logo.3646d33d5e.svg (already uploaded logo.svg)
+2025-10-20T06:17:21.263Z	 = planet/license.32de1a86e6.txt (already uploaded planet/license.txt)
+2025-10-20T06:17:21.267Z	 = planet/scene.a968a2fbe6.bin (already uploaded planet/scene.bin)
+2025-10-20T06:17:21.268Z	 = planet/scene.fc921f6c1e.gltf (already uploaded planet/scene.gltf)
+2025-10-20T06:17:21.271Z	 = planet/textures/Clouds_baseColor.e98e6c2868.png (already uploaded planet/textures/Clouds_baseColor.png)
+2025-10-20T06:17:21.273Z	 = planet/textures/Planet_baseColor.2d394948b8.png (already uploaded planet/textures/Planet_baseColor.png)
+2025-10-20T06:17:21.273Z	 - assets/Earth-CnJ6frvo.a0899e35b8.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/Experience-rxmHBcX5.65b7843cb2.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/Loader-lu8Oeagu.5949519ebb.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/SafeCanvas-bRRczGV7.5937a39738.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/Stars-CBnjLXhD.076b2c2c02.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/Tech-C8k_FcUG.2a124f89ed.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/Volunteering-CusOoCpq.f51cd4599c.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/Works-ZweaRAsx.39ac0c710d.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/index-BX2FIxpm.e726c89679.css (removing as stale)
+2025-10-20T06:17:21.273Z	 - assets/index-CRgP-Tmb.1b9ab17f1f.js (removing as stale)
+2025-10-20T06:17:21.273Z	 - index.6c378e2699.html (removing as stale)
+2025-10-20T06:17:21.274Z	Uploading 11 new assets...
+2025-10-20T06:17:21.274Z	Skipped uploading 64 existing assets.
+2025-10-20T06:17:22.039Z	Uploaded 100% [11 out of 11]
+2025-10-20T06:17:22.040Z	Removing 11 stale assets...
+2025-10-20T06:17:22.691Z	↗️  Done syncing assets
+2025-10-20T06:17:22.798Z	Total Upload: 4003.39 KiB / gzip: 663.42 KiB
+2025-10-20T06:17:27.897Z	
+2025-10-20T06:17:27.911Z	✘ [ERROR] A request to the Cloudflare API (/accounts/c3f7065a8b4d93ece304209b79130d72/workers/scripts/preetportfolio) failed.
+2025-10-20T06:17:27.911Z	
+2025-10-20T06:17:27.911Z	  Uncaught ReferenceError: document is not defined
+2025-10-20T06:17:27.911Z	    at null.<anonymous> (file:///opt/buildhome/repo/src/main.jsx:7:21)
+2025-10-20T06:17:27.912Z	    at null.<anonymous> (worker.js:92826:3)
+2025-10-20T06:17:27.912Z	   [code: 10021]
+2025-10-20T06:17:27.912Z	
+2025-10-20T06:17:27.913Z	  
+2025-10-20T06:17:27.913Z	  If you think this is a bug, please open an issue at: https://github.com/cloudflare/workers-sdk/issues/new/choose
+2025-10-20T06:17:27.913Z	
+2025-10-20T06:17:27.913Z	
+2025-10-20T06:17:27.913Z	
+2025-10-20T06:17:27.913Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2025-10-20T06:17:27.965Z	🪵  Logs were written to "/opt/buildhome/.config/.wrangler/logs/wrangler-2025-10-20_06-17-14_691.log"
+2025-10-20T06:17:28.018Z	Failed: error occurred while running deploy command
