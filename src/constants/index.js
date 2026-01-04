@@ -331,7 +331,7 @@ const projects = [
   },
   {
     name: "Harry Potter Quidditch Champions",
-    image: "flask-logo.svg",
+    image: "flask-original.svg",
     description:
       "A Harry Potter–themed Quidditch tournament management platform that allows users to register teams, book match tickets, and receive real-time confirmations. The system includes an admin portal for scheduling matches and managing events, along with secure online payments and automated email notifications.",
     tags: [
