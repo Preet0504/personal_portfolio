@@ -329,6 +329,87 @@ const projects = [
     ],
     source_code_link: "https://campus-art.vercel.app/",
   },
+  {
+    name: "Harry Potter Quidditch Champions",
+    image: "flask-logo.svg",
+    description:
+      "A Harry Potter–themed Quidditch tournament management platform that allows users to register teams, book match tickets, and receive real-time confirmations. The system includes an admin portal for scheduling matches and managing events, along with secure online payments and automated email notifications.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "flask", color: "green-text-gradient" },
+      { name: "mongo-db", color: "orange-text-gradient" },
+      { name: "stripe", color: "pink-text-gradient" },
+      { name: "gunicorn", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://hpquidditch.onrender.com/",
+  },
+  {
+    name: "Battle Painters",
+    image: "python-original.svg",
+    description:
+      "A real-time interactive multiplayer painting game built using Computer Vision. Players use hand gestures detected via webcam to paint inside a shared canvas. Each hand is assigned a color, and the winner is determined based on pixel coverage within a defined region.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "computer-vision", color: "green-text-gradient" },
+      { name: "mediapipe", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/Preet0504/battle_painters",
+  },
+  {
+    name: "Ping Pong",
+    image: "python-original.svg",
+    description:
+      "A real-time gesture-controlled Pong-style game built using Computer Vision. Players use their hands as paddles, tracked live through a webcam, to bounce a ball and score points. This project demonstrates interactive CV-based gameplay using hand tracking, collision detection, and real-time rendering.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "opencv", color: "green-text-gradient" },
+      { name: "flask", color: "orange-text-gradient" },
+      { name: "data science", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/Preet0504/battle_painters",
+  },
+  {
+    name: "End-to-End Machine Learning Pipeline with MLOps",
+    image: "python-original.svg",
+    description:
+      "An end-to-end Machine Learning project demonstrating the complete lifecycle of a real-world ML system — from data exploration and feature engineering to model training, evaluation, deployment, and frontend integration. This project focuses on building a production-ready ML pipeline using CatBoost, wrapped with clean modular design and connected to a web-based frontend for real-time inference.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "machine learning", color: "green-text-gradient" },
+      { name: "cvzone", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/Preet0504/ML_Project",
+  },
+  {
+    name: "Campus Scout",
+    image: "react-original.svg",
+    description:
+      "This work is currently under construction...",
+    tags: [
+      { name: "javascript", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "vite", color: "orange-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" }
+    ],
+    source_code_link: "https://campus-scout.vercel.app/",
+  },
+  {
+    name: "Aca-d-ashboard",
+    image: "typescript-original.svg",
+    description:
+      "This work is currently under construction...",
+    tags: [
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "vite", color: "orange-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" },
+      { name: "supabase", color: "blue-text-gradient" },
+      { name: "bun", color: "green-text-gradient" },
+      { name: "vite", color: "orange-text-gradient" },
+      { name: "react", color: "pink-text-gradient" }
+    ],
+    source_code_link: "https://acadashboard.vercel.app/",
+  },
 ];
 
 const publications = [
