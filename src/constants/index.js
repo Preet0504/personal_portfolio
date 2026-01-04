@@ -363,8 +363,7 @@ const projects = [
     tags: [
       { name: "python", color: "blue-text-gradient" },
       { name: "opencv", color: "green-text-gradient" },
-      { name: "flask", color: "orange-text-gradient" },
-      { name: "data science", color: "orange-text-gradient" },
+      { name: "cvzone", color: "orange-text-gradient" },
     ],
     source_code_link: "https://github.com/Preet0504/battle_painters",
   },
@@ -375,10 +374,11 @@ const projects = [
       "An end-to-end Machine Learning project demonstrating the complete lifecycle of a real-world ML system — from data exploration and feature engineering to model training, evaluation, deployment, and frontend integration. This project focuses on building a production-ready ML pipeline using CatBoost, wrapped with clean modular design and connected to a web-based frontend for real-time inference.",
     tags: [
       { name: "python", color: "blue-text-gradient" },
-      { name: "machine learning", color: "green-text-gradient" },
-      { name: "cvzone", color: "orange-text-gradient" },
+      { name: "machine-learning", color: "green-text-gradient" },
+      { name: "flask", color: "orange-text-gradient" },
+      { name: "data-science", color: "orange-text-gradient" },
     ],
-    source_code_link: "https://github.com/Preet0504/ML_Project",
+    source_code_link: "https://github.com/Preet0504/battle_painters",
   },
   {
     name: "Campus Scout",
