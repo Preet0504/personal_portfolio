@@ -1,4 +1,4 @@
-export const navLinks = [
+  export const navLinks = [
   {
     id: "about",
     title: "About",
@@ -365,7 +365,7 @@ const projects = [
       { name: "opencv", color: "green-text-gradient" },
       { name: "cvzone", color: "orange-text-gradient" },
     ],
-    source_code_link: "https://github.com/Preet0504/battle_painters",
+    source_code_link: "https://github.com/Preet0504/Ping_Pong",
   },
   {
     name: "End-to-End Machine Learning Pipeline with MLOps",
@@ -378,7 +378,7 @@ const projects = [
       { name: "flask", color: "orange-text-gradient" },
       { name: "data-science", color: "orange-text-gradient" },
     ],
-    source_code_link: "https://github.com/Preet0504/battle_painters",
+    source_code_link: "https://github.com/Preet0504/ML_Project",
   },
   {
     name: "Campus Scout",
