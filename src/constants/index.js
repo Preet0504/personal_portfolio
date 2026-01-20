@@ -312,6 +312,20 @@ const projects = [
     source_code_link: "https://github.com/Preet0504/GraphRAG-A-Distributed-Knowledge-Graph-Pipeline-Using-Apache-Flink-Neo4j-LLMs",
   },
   {
+    name: "Go Emotions",
+    image: "tensorflow-original.svg",
+    description:
+      "This repository contains a Flask web application that serves a multi-label emotion classifier built with TensorFlow/Keras, using: GloVe embeddings (frozen), Bidirectional LSTM, Sigmoid multi-label outputs, and Focal Loss for imbalance handling",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "flask", color: "green-text-gradient" },
+      { name: "tensorflow", color: "orange-text-gradient" },
+      { name: "deep learning", color: "pink-text-gradient" },
+      { name: "GloVe", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/Rishi7337/GO_EMOTIONS",
+  },
+  {
     name: "Campus ARt",
     image: "ar-logo.webp",
     description:
@@ -364,19 +378,6 @@ const projects = [
       { name: "python", color: "blue-text-gradient" },
       { name: "opencv", color: "green-text-gradient" },
       { name: "cvzone", color: "orange-text-gradient" },
-    ],
-    source_code_link: "https://github.com/Preet0504/battle_painters",
-  },
-  {
-    name: "End-to-End Machine Learning Pipeline with MLOps",
-    image: "python-original.svg",
-    description:
-      "An end-to-end Machine Learning project demonstrating the complete lifecycle of a real-world ML system — from data exploration and feature engineering to model training, evaluation, deployment, and frontend integration. This project focuses on building a production-ready ML pipeline using CatBoost, wrapped with clean modular design and connected to a web-based frontend for real-time inference.",
-    tags: [
-      { name: "python", color: "blue-text-gradient" },
-      { name: "machine-learning", color: "green-text-gradient" },
-      { name: "flask", color: "orange-text-gradient" },
-      { name: "data-science", color: "orange-text-gradient" },
     ],
     source_code_link: "https://github.com/Preet0504/battle_painters",
   },
