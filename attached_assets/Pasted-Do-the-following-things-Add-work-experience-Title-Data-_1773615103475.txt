@@ -1,0 +1,53 @@
+Do the following things:
+
+Add work experience:
+Title: Data Analyst
+Location: UIC - College of Medicine
+Logo: UIC
+Duration: March 2026 - Present
+Description: [You modify it] Work on the student evaluation data across 3 campuses of UIC College of Medicine in Chicago, Peoria, and Rockford. Analyze the data to influence the teaching methodology and make the lives of the teachers and education department easier and try to improve the student experience.
+
+Add 3 Projects:
+
+(a) UCE:
+Details: {
+(b) Overmind:
+Details: {
+Overmind is a multiplayer terminal coding REPL where teams can collaborate on the same codebase in real-time, with AI-powered prompt evaluation and automatic code execution.
+
+Core Features:
+WebSocket-Based Party System
+
+Host creates a "party" with a 4-letter code
+Teammates join from anywhere (local Wi-Fi or globally via ngrok)
+Real-time sync of all team members and their activity
+Story-Based Prompts with Intelligent Routing
+
+Plain English Queries: Team members type natural language prompts
+Story Agent Evaluation (Gemini): Automatically classifies each prompt into three categories:
+reject — Off-topic, not relevant to project
+create_new — New, distinct feature direction
+assign_existing — Continuation of existing feature
+Auto-Execution: Non-rejected prompts execute immediately (no manual approval needed)
+Story Agent (Feature Clustering)
+
+Continuous semantic clustering via Gemini
+Learns what the team is building as they work
+Maintains living project narrative in story.md
+Automatically rejects off-topic queries
+Execution Pipeline
+
+File locking prevents race conditions when multiple team members execute simultaneously
+Modal orchestrator sandboxes code execution safely
+Stages: Acquire locks → Sync workspace → Spawn agent → Agent executes → Extract & apply diffs
+Real-time progress updates with execution stage visibility
+Beautiful Terminal UI (Ink + React)
+
+Activity feed showing team actions in real-time
+Member status tracking (idle/typing/executing)
+Execution progress with stage indicators and spinner
+Party panel with member list
+}
+Link: https://github.com/atharva789/Overmind
+Keywords: Modal, Claude Code, Codex, Gemini
+Logo: Claude Logo attached

@@ -151,6 +151,19 @@ const technologies = {
 
 const experiences = [
   {
+    title: "Data Analyst",
+    company_name: "UIC - College of Medicine",
+    icon: "/uic.png",
+    iconBg: "#383E56",
+    date: "March 2026 - Present",
+    points: [
+      "Analyzing student evaluation data spanning three UIC College of Medicine campuses — Chicago, Peoria, and Rockford — to uncover patterns and trends that drive meaningful academic insights.",
+      "Translating data findings into actionable recommendations that directly shape teaching methodologies and curriculum design across campuses.",
+      "Streamlining reporting workflows for faculty and the education department, reducing manual effort and enabling faster, evidence-based decision-making.",
+      "Contributing to an improved student learning experience by identifying gaps in evaluation practices and proposing data-backed improvements.",
+    ],
+  },
+  {
     title: "Product Development Intern",
     company_name: "yourEDUGATOR",
     icon: "/youredugator.png",
@@ -265,23 +278,33 @@ const volunteering = [
 
 const projects = [
   {
-    name: "Aca-d-ashboard",
-    image: "typescript-original.svg",
+    category: "AI/ML & Data",
+    name: "UCE — Unified Context Engine",
+    image: "/pypi-logo.png",
     description:
-      "A comprehensive, production-ready Learning Management System (LMS) built with modern web technologies. UniCourse provides role-based access control, real-time data management, and an elegant, responsive user interface for managing university courses, enrollments, assignments, and grades.",
+      "A pip-installable, CLI-friendly tool that constructs a deterministic knowledge graph of any codebase inside Neo4j. UCE ingests source files, schemas, requirements, and policies across multiple repositories and languages, then continuously updates the graph via a file watcher. It exposes reasoning tools through an MCP server for impact analysis and risk assessment — supporting Python, TypeScript, JavaScript, Go, Java, C, and C++ via Tree-sitter.",
     tags: [
-      { name: "typescript", color: "blue-text-gradient" },
-      { name: "react", color: "green-text-gradient" },
-      { name: "vite", color: "orange-text-gradient" },
-      { name: "vercel", color: "pink-text-gradient" },
-      { name: "supabase", color: "blue-text-gradient" },
-      { name: "bun", color: "green-text-gradient" },
-      { name: "vite", color: "orange-text-gradient" },
-      { name: "react", color: "pink-text-gradient" }
+      { name: "neo4j", color: "green-text-gradient" },
+      { name: "python", color: "blue-text-gradient" },
     ],
-    source_code_link: "https://acadashboard.vercel.app/",
+    source_code_link: "https://pypi.org/project/uce-engine/",
   },
   {
+    category: "AI/ML & Data",
+    name: "Overmind",
+    image: "/claude-logo.png",
+    description:
+      "A multiplayer terminal coding REPL where teams collaborate on a shared codebase in real time. Overmind features WebSocket-based party rooms (join via a 4-letter code), story-driven AI prompt evaluation powered by Gemini that classifies each query as new, continuation, or off-topic, and an automated execution pipeline with file locking to handle concurrent edits safely. The terminal UI (Ink + React) shows a live activity feed, member status, and execution progress.",
+    tags: [
+      { name: "modal", color: "blue-text-gradient" },
+      { name: "claude-code", color: "orange-text-gradient" },
+      { name: "codex", color: "green-text-gradient" },
+      { name: "gemini", color: "pink-text-gradient" },
+    ],
+    source_code_link: "https://github.com/atharva789/Overmind",
+  },
+  {
+    category: "AI/ML & Data",
     name: "Distributed RAG Pipeline using Apache Hadoop",
     image: "/hadoop-original.svg",
     description:
@@ -299,10 +322,11 @@ const projects = [
     source_code_link: "https://github.com/Preet0504/Distributed-RAG-Pipeline-on-AWS-EMR-using-Apache-Hadoop",
   },
   {
+    category: "AI/ML & Data",
     name: "Distributed Document Embedding Pipeline using Apache Spark",
     image: "/Apache_Spark_logo.svg.png",
     description:
-      "This project transforms a standalone document processing script into a distributed, cloud-native Spark application running on AWS EMR. The system ingests multiple PDF files from Amazon S3, extracts text, splits it into semantically coherent chunks, and generates embeddings using an external Ollama API hosted on a separate EC2 instance. The processed data is then written back to S3 as a Delta Lake table, enabling versioned, fault-tolerant, and query-efficient access for downstream analytics.",
+      "Transforms a standalone document processing script into a distributed, cloud-native Spark application on AWS EMR. The system ingests PDFs from S3, extracts and chunks text, generates embeddings via an Ollama API on EC2, and writes results to a versioned Delta Lake table for fault-tolerant downstream analytics.",
     tags: [
       { name: "spark", color: "blue-text-gradient" },
       { name: "aws", color: "green-text-gradient" },
@@ -314,10 +338,11 @@ const projects = [
     source_code_link: "https://github.com/Preet0504/Distributed-Document-Embedding-Pipeline-on-AWS-EMR-using-Apache-Spark",
   },
   {
+    category: "AI/ML & Data",
     name: "GraphRAG: A Distributed Knowledge Graph Pipeline",
     image: "/neo4j-original.svg",
     description:
-      "A fully distributed GraphRAG system that builds a streaming knowledge graph to support retrieval and reasoning across documents. It combines Apache Flink for dataflow processing, Neo4j for graph storage, Ollama for semantic enrichment, and deterministic NLP signals, with a REST API for querying and explanation.",
+      "A fully distributed GraphRAG system that constructs a streaming knowledge graph for retrieval and reasoning across documents. Combines Apache Flink for dataflow processing, Neo4j for graph storage, and Ollama for semantic enrichment — with a REST API for querying and explanation.",
     tags: [
       { name: "flink", color: "blue-text-gradient" },
       { name: "neo4j", color: "green-text-gradient" },
@@ -329,42 +354,73 @@ const projects = [
     source_code_link: "https://github.com/Preet0504/GraphRAG-A-Distributed-Knowledge-Graph-Pipeline-Using-Apache-Flink-Neo4j-LLMs",
   },
   {
+    category: "AI/ML & Data",
     name: "Go Emotions",
     image: "tensorflow-original.svg",
     description:
-      "This repository contains a Flask web application that serves a multi-label emotion classifier built with TensorFlow/Keras, using: GloVe embeddings (frozen), Bidirectional LSTM, Sigmoid multi-label outputs, and Focal Loss for imbalance handling",
+      "A Flask web application serving a multi-label emotion classifier trained with TensorFlow/Keras. Uses frozen GloVe embeddings, a Bidirectional LSTM, sigmoid outputs for multi-label classification, and Focal Loss to handle class imbalance effectively.",
     tags: [
       { name: "python", color: "blue-text-gradient" },
       { name: "flask", color: "green-text-gradient" },
       { name: "tensorflow", color: "orange-text-gradient" },
-      { name: "deep learning", color: "pink-text-gradient" },
+      { name: "deep-learning", color: "pink-text-gradient" },
       { name: "GloVe", color: "orange-text-gradient" },
     ],
     source_code_link: "https://github.com/Rishi7337/GO_EMOTIONS",
   },
   {
+    category: "Software & Web",
+    name: "TalkAI",
+    image: "/talkai-logo.png",
+    description:
+      "A platform for building custom AI agents that handle customer conversations over HD video calls with natural voice interaction. Agents can be tailored for support, sales, or technical consulting, and every session is automatically summarized with key insights and follow-up actions. Includes real-time transcription, enterprise-grade encryption, and a quick setup flow to get agents running in minutes.",
+    tags: [
+      { name: "next.js", color: "blue-text-gradient" },
+      { name: "neon-database", color: "green-text-gradient" },
+      { name: "node.js", color: "orange-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" },
+    ],
+    source_code_link: "https://talkai-ruby.vercel.app/",
+  },
+  {
+    category: "Software & Web",
+    name: "Aca-d-ashboard",
+    image: "typescript-original.svg",
+    description:
+      "A production-ready Learning Management System with role-based access control, real-time data management, and a responsive interface for handling university courses, enrollments, assignments, and grades.",
+    tags: [
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "vite", color: "orange-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" },
+      { name: "supabase", color: "blue-text-gradient" },
+      { name: "bun", color: "green-text-gradient" },
+    ],
+    source_code_link: "https://acadashboard.vercel.app/",
+  },
+  {
+    category: "Software & Web",
     name: "Campus ARt",
     image: "ar-logo.webp",
     description:
-      "An interactive campus map that lets students unlock virtual art hotspots by physically visiting locations. Users can enter an AR space, leave notes or sketches on a shared canvas, and see contributions from others who visit the same spot.",
+      "An interactive campus map where students unlock virtual art hotspots by physically visiting locations. Users can enter an AR space, leave notes or sketches on a shared canvas, and view contributions from others at the same spot.",
     tags: [
       { name: "react", color: "blue-text-gradient" },
       { name: "next.js", color: "green-text-gradient" },
       { name: "node.js", color: "orange-text-gradient" },
       { name: "webxr", color: "pink-text-gradient" },
       { name: "websockets", color: "orange-text-gradient" },
-      { name: "geolocation", color: "green-text-gradient" },
       { name: "mind-ar", color: "blue-text-gradient" },
       { name: "typescript", color: "pink-text-gradient" },
-      { name: "vercel", color: "blue-text-gradient" },
     ],
     source_code_link: "https://campus-art.vercel.app/",
   },
   {
+    category: "Software & Web",
     name: "Harry Potter Quidditch Champions",
     image: "flask-original.svg",
     description:
-      "A Harry Potter–themed Quidditch tournament management platform that allows users to register teams, book match tickets, and receive real-time confirmations. The system includes an admin portal for scheduling matches and managing events, along with secure online payments and automated email notifications.",
+      "A Harry Potter–themed Quidditch tournament management platform for registering teams, booking match tickets, and receiving real-time confirmations. Includes an admin portal for scheduling, secure online payments via Stripe, and automated email notifications.",
     tags: [
       { name: "python", color: "blue-text-gradient" },
       { name: "flask", color: "green-text-gradient" },
@@ -375,30 +431,7 @@ const projects = [
     source_code_link: "https://hpquidditch.onrender.com/",
   },
   {
-    name: "Battle Painters",
-    image: "python-original.svg",
-    description:
-      "A real-time interactive multiplayer painting game built using Computer Vision. Players use hand gestures detected via webcam to paint inside a shared canvas. Each hand is assigned a color, and the winner is determined based on pixel coverage within a defined region.",
-    tags: [
-      { name: "python", color: "blue-text-gradient" },
-      { name: "computer-vision", color: "green-text-gradient" },
-      { name: "mediapipe", color: "orange-text-gradient" },
-    ],
-    source_code_link: "https://github.com/Preet0504/battle_painters",
-  },
-  {
-    name: "Ping Pong",
-    image: "python-original.svg",
-    description:
-      "A real-time gesture-controlled Pong-style game built using Computer Vision. Players use their hands as paddles, tracked live through a webcam, to bounce a ball and score points. This project demonstrates interactive CV-based gameplay using hand tracking, collision detection, and real-time rendering.",
-    tags: [
-      { name: "python", color: "blue-text-gradient" },
-      { name: "opencv", color: "green-text-gradient" },
-      { name: "cvzone", color: "orange-text-gradient" },
-    ],
-    source_code_link: "https://github.com/Preet0504/Ping_Pong",
-  },
-  {
+    category: "Software & Web",
     name: "Campus Scout",
     image: "react-original.svg",
     description:
@@ -410,6 +443,32 @@ const projects = [
       { name: "vercel", color: "pink-text-gradient" }
     ],
     source_code_link: "https://campus-scout.vercel.app/",
+  },
+  {
+    category: "Mini Projects",
+    name: "Battle Painters",
+    image: "python-original.svg",
+    description:
+      "A real-time multiplayer painting game powered by Computer Vision. Players use hand gestures via webcam to paint on a shared canvas — each hand gets a unique color, and the winner is whoever covers the most pixels in a defined region.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "computer-vision", color: "green-text-gradient" },
+      { name: "mediapipe", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/Preet0504/battle_painters",
+  },
+  {
+    category: "Mini Projects",
+    name: "Ping Pong",
+    image: "python-original.svg",
+    description:
+      "A gesture-controlled Pong-style game where players use their hands as paddles, tracked live through a webcam. Demonstrates interactive CV-based gameplay with hand tracking, collision detection, and real-time rendering.",
+    tags: [
+      { name: "python", color: "blue-text-gradient" },
+      { name: "opencv", color: "green-text-gradient" },
+      { name: "cvzone", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/Preet0504/Ping_Pong",
   },
 ];
 
