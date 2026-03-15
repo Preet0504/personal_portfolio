@@ -265,6 +265,23 @@ const volunteering = [
 
 const projects = [
   {
+    name: "Aca-d-ashboard",
+    image: "typescript-original.svg",
+    description:
+      "A comprehensive, production-ready Learning Management System (LMS) built with modern web technologies. UniCourse provides role-based access control, real-time data management, and an elegant, responsive user interface for managing university courses, enrollments, assignments, and grades.",
+    tags: [
+      { name: "typescript", color: "blue-text-gradient" },
+      { name: "react", color: "green-text-gradient" },
+      { name: "vite", color: "orange-text-gradient" },
+      { name: "vercel", color: "pink-text-gradient" },
+      { name: "supabase", color: "blue-text-gradient" },
+      { name: "bun", color: "green-text-gradient" },
+      { name: "vite", color: "orange-text-gradient" },
+      { name: "react", color: "pink-text-gradient" }
+    ],
+    source_code_link: "https://acadashboard.vercel.app/",
+  },
+  {
     name: "Distributed RAG Pipeline using Apache Hadoop",
     image: "/hadoop-original.svg",
     description:
@@ -393,23 +410,6 @@ const projects = [
       { name: "vercel", color: "pink-text-gradient" }
     ],
     source_code_link: "https://campus-scout.vercel.app/",
-  },
-  {
-    name: "Aca-d-ashboard",
-    image: "typescript-original.svg",
-    description:
-      "This work is currently under construction...",
-    tags: [
-      { name: "typescript", color: "blue-text-gradient" },
-      { name: "react", color: "green-text-gradient" },
-      { name: "vite", color: "orange-text-gradient" },
-      { name: "vercel", color: "pink-text-gradient" },
-      { name: "supabase", color: "blue-text-gradient" },
-      { name: "bun", color: "green-text-gradient" },
-      { name: "vite", color: "orange-text-gradient" },
-      { name: "react", color: "pink-text-gradient" }
-    ],
-    source_code_link: "https://acadashboard.vercel.app/",
   },
 ];
 
