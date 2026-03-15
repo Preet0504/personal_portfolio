@@ -294,6 +294,8 @@ const projects = [
     tags: [
       { name: "neo4j", color: "green-text-gradient" },
       { name: "python", color: "blue-text-gradient" },
+      { name: "MCP", color: "orange-text-gradient" },
+      { name: "goose", color: "pink-text-gradient" }
     ],
     source_code_link: "https://pypi.org/project/uce-engine/",
   },
