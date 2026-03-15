@@ -12,6 +12,10 @@
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
     id: "volunteering",
     title: "Volunteering",
   },
