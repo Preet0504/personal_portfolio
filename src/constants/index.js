@@ -357,7 +357,6 @@ const projects = [
       { name: "flink", color: "blue-text-gradient" },
       { name: "neo4j", color: "green-text-gradient" },
       { name: "llm-inference", color: "orange-text-gradient" },
-      { name: "cypher-queries", color: "pink-text-gradient" },
       { name: "rest-api", color: "green-text-gradient" },
       { name: "scala", color: "blue-text-gradient" },
     ],
