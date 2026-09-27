@@ -147,6 +147,86 @@ const projects = [
   },
 
   {
+    slug: "sage",
+    name: "SAGE — Self-correction Analysis and Guidance Engine",
+    date: "2026-09-20",
+    period: "Sep 2026",
+    category: "AI Agents & Tooling",
+    tagline:
+      "Where GRACE traces multi-agent hand-off failures, SAGE goes one level deeper: it root-causes a single agent's own reasoning inside one continuous session — with no orchestrator to blame and often no failing test to start from.",
+    role: "Solo build",
+    tags: ["Claude Agent SDK", "Session forensics", "Python", "Root cause analysis"],
+    links: {
+      repo: "https://github.com/Preet0504/GRACE/tree/self-correction-mining",
+    },
+    metrics: [
+      { label: "Confirmed root causes", value: "43 across 2 real sessions" },
+      { label: "Spread beyond origin file", value: "67%" },
+      { label: "Cross-adjudication agreement", value: "87%" },
+    ],
+    sections: [
+      {
+        heading: "The problem it solves",
+        paragraphs: [
+          "A coding session can pass its final check while still wasting real work along the way — a CSS rule written against a variable that doesn't exist, a bug diagnosed wrong twice before the real cause is found, a feature shipped without noticing it needed a second file changed. None of that shows up in a pass/fail signal, so it's never measured, and what's never measured never gets fixed. SAGE exists to make that cost visible, attributable to an exact transcript line, and convert it directly into a guidance rule that prevents it from recurring.",
+        ],
+      },
+      {
+        heading: "A five-phase pipeline over a real session transcript",
+        list: [
+          "Provenance Reconstruction — rebuilds every touched file's content purely from the session's own Read/Edit/Write calls and chains edits that land on the same region. A chain of length ten or more is exactly where a root cause is worth looking for.",
+          "Signal Detection — scans the agent's own words (not its code) for language signaling a reversal, an unverified assumption, overbuilding, or a scope surprise, with word-boundary matching so a phrase can't fire by accident inside an unrelated word. This phase only produces candidates, never conclusions.",
+          "Evidence Assembly — turns raw candidates into bounded, readable packets: before/after snippets, folded tool output, duplicates merged. Nothing reaches a verdict without appearing here first.",
+          "Root Cause Adjudication — applies a fixed test to every candidate (plan fault vs. execution fault; a real commitment vs. the agent thinking out loud; would the outcome differ if this one step were done right). Most candidates are rejected here — a rejection is the check working, not a miss.",
+          "Causal Tracing — walks backward to the real instruction that set a confirmed root cause in motion (skipping bare approvals like 'sounds good, go ahead') and forward to every file the mistake went on to touch.",
+        ],
+      },
+      {
+        heading: "A six-type defect taxonomy, built from real transcripts",
+        table: {
+          headers: ["Code", "Type", "What it means"],
+          rows: [
+            ["C", "Unverified Leap", "Code written against a belief that was never checked — almost always the largest, highest-leverage category"],
+            ["B", "Discarded Work", "Something built, then undone or replaced once it turned out wrong"],
+            ["F", "Hidden Scope", "The agent's own words name something its plan never accounted for"],
+            ["P", "Procedural Slip", "An edit attempted before the file had been read this session"],
+            ["D", "Overbuild", "More mechanism built than the task needed, then stripped back"],
+            ["A", "Confirmed Failure", "A real, checkable failure the transcript shows this step caused"],
+          ],
+        },
+      },
+      {
+        heading: "Validated two ways, not just asserted",
+        paragraphs: [
+          "Against constructed ground truth: a synthetic session with four events of known root-cause type plus three deliberate traps designed to look like a hit but not be one. Phases 1–2 recovered all four, with zero false credit given to any trap.",
+          "Against a second, independent read: two separate adjudication passes over the same 46 candidates, each starting cold with no memory of the other, agreed on confirm/reject 87% of the time and on root-cause type every single time they both confirmed the same instance.",
+        ],
+      },
+      {
+        heading: "Results across two real sessions",
+        table: {
+          headers: ["", "Session 1", "Session 2", "Combined"],
+          rows: [
+            ["File regions touched", "165", "296", "461"],
+            ["Confirmed root causes", "16", "27", "43"],
+            ["Spread beyond origin file", "9", "20", "29 (67%)"],
+          ],
+        },
+        paragraphs2: [
+          "The strongest synthesized rule — verify an external contract before writing code that depends on it — is backed by 19 separate confirmed instances in a single session alone. The weakest is kept in the list with an explicit note that only one instance supports it, rather than dressed up with false confidence.",
+        ],
+      },
+      {
+        heading: "What this doesn't claim — kept in, not smoothed over",
+        paragraphs: [
+          "An earlier trial tried to measure whether synthesized rules change agent behavior via an A/B test on a short task, and it was deliberately excluded from the results above: a session's trajectory can't be replayed, so the trial ended up measuring a small fixed overhead with nothing for the rules to have prevented. That's documented as a flaw in the trial, not a finding about the rules — full reasoning kept in the repo rather than quietly dropped.",
+          "Scope is stated honestly: two sessions is a small corpus, one of them rests on a single adjudication pass rather than two, and the six root-cause types are a first pass grounded in real transcripts but not yet tested against a larger or more varied corpus.",
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "causeway",
     name: "Causeway",
     date: "2026-09-17",

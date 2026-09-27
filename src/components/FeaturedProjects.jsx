@@ -16,7 +16,7 @@ const FeaturedProjects = () => {
       id="projects"
       eyebrow="Selected work"
       title="Recent projects"
-      subtitle="17 shipped projects, in chronological order, each with its own case study — architecture, real numbers, and the bugs that were actually found and fixed."
+      subtitle="18 shipped projects, in chronological order, each with its own case study — architecture, real numbers, and the bugs that were actually found and fixed."
     >
       <motion.div
         initial="hidden"
@@ -32,7 +32,7 @@ const FeaturedProjects = () => {
 
       <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }} className="mt-10 text-center">
         <Button to="/projects" variant="outline">
-          See all 17 projects
+          See all 18 projects
         </Button>
       </motion.div>
     </Section>

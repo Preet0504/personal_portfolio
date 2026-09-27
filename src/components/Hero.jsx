@@ -60,7 +60,7 @@ const Hero = () => {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl border-t border-border pt-8"
         >
           {[
-            ["17+", "shipped projects"],
+            ["18+", "shipped projects"],
             ["1", "PyPI package"],
             ["1", "IEEE publication"],
             ["2026", "MS CS @ UIC"],

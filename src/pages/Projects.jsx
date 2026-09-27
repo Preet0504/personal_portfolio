@@ -22,7 +22,7 @@ const Projects = () => {
           Everything I've shipped, in chronological order.
         </h1>
         <p className={`${styles.body} mt-4 max-w-2xl`}>
-          17 projects, newest first. Each one links to its own case study —
+          18 projects, newest first. Each one links to its own case study —
           real architecture, real numbers, and honest limitations, not a
           screenshot and a one-liner.
         </p>
