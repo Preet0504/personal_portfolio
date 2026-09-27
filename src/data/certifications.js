@@ -35,6 +35,13 @@ const certifications = [
     credential_id: "266B3E434DD2",
     credential_url: "https://www.hackerrank.com/certificates/266b3e434dd2",
   },
+  {
+    title: "Data Analysis with Python",
+    issuer: "Cognitive Class",
+    date: null,
+    credential_id: null,
+    credential_url: null,
+  },
 ];
 
 export default certifications;
