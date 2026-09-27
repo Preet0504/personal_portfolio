@@ -1,110 +1,77 @@
-// import { ComputersCanvas } from "./canvas";
+import { motion } from "framer-motion";
 import { styles } from "../styles";
-import Typewriter from "typewriter-effect";
+import Button from "./ui/Button";
 
 const Hero = () => {
   return (
-    <section className="relative w-full mx-auto overflow-hidden pt-16">
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+      <div className="absolute inset-0 bg-noise-grid" />
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-accent/20 blur-[140px]" />
 
-      {/* ================= Banner ================= */}
-      <div className="relative w-full h-56 sm:h-72 md:h-80 overflow-hidden z-0">
-        <img
-          src="/banner.webp"
-          alt="Banner"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-primary" />
-      </div>
+      <div className={`${styles.container} relative z-10 pt-24`}>
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className={styles.eyebrow}
+        >
+          Preet Patel — AI Software Engineer
+        </motion.p>
 
-      {/* ================= Foreground Content ================= */}
-      <div
-        className={`
-          relative max-w-7xl mx-auto
-          ${styles.paddingX}
-          mt-6
-          z-20
-        `}
-      >
-        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 sm:gap-8">
+        <motion.h1
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className={`${styles.h1} mt-5 max-w-4xl`}
+        >
+          I build <span className="text-gradient">agentic systems</span> and
+          distributed infrastructure that hold up under real load.
+        </motion.h1>
 
-          {/* Profile Picture */}
-          <div className="flex-shrink-0">
-            <div
-              className="
-                relative w-28 h-28
-                sm:w-40 sm:h-40
-                md:w-48 md:h-48
-                rounded-full overflow-hidden
-                border-4 border-purple-500
-                shadow-2xl
-                bg-black
-              "
-            >
-              <img
-                src="/preet_pfp.webp"
-                alt="Preet Patel"
-                className="w-full h-full object-cover"
-              />
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className={`${styles.body} mt-6 max-w-2xl text-[17px]`}
+        >
+          MS Computer Science student at UIC. I've shipped a governance layer
+          for AI coding agents backed by formal model checking, benchmarked a
+          LAN video server against HLS/DASH/WebRTC, and contributed real
+          async infrastructure to Zulip's open-source codebase — alongside
+          production web apps that real users log into every day.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mt-9 flex flex-wrap items-center gap-4"
+        >
+          <Button to="/projects">View all projects</Button>
+          <Button href="/Preet_Resume_Final.pdf" variant="outline">
+            Download résumé
+          </Button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl border-t border-border pt-8"
+        >
+          {[
+            ["17+", "shipped projects"],
+            ["1", "PyPI package"],
+            ["1", "IEEE publication"],
+            ["2026", "MS CS @ UIC"],
+          ].map(([n, l]) => (
+            <div key={l}>
+              <div className="font-mono text-2xl font-bold text-white">{n}</div>
+              <div className="text-xs text-muted mt-1">{l}</div>
             </div>
-          </div>
-
-          {/* Text Content */}
-          <div className="flex-1 pb-2">
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I'm <span className="text-[#915EFF]">Preet</span>
-            </h1>
-
-            <div className={`${styles.heroSubText} mt-2 text-white-100 flex flex-wrap gap-x-2`}>
-              <span>I</span>
-              <Typewriter
-                options={{
-                  strings: [
-                    "design distributed pipelines.",
-                    "build scalable applications.",
-                    "solve real-world problems.",
-                    "am a CS Graduate Student at UIC.",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  delay: 50,
-                  deleteSpeed: 30,
-                  wrapperClassName: "text-[#915EFF] font-bold",
-                  cursorClassName: "text-[#915EFF]",
-                }}
-              />
-            </div>
-          </div>
-
-        </div>
+          ))}
+        </motion.div>
       </div>
-
-      {/* ================= MOBILE 3D (NORMAL FLOW) ================= */}
-      {/* <div className="block md:hidden mt-20 h-[380px]">
-        <ComputersCanvas />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-transparent to-transparent pointer-events-none" />
-      </div> */}
-
-      {/* ================= DESKTOP 3D (ABSOLUTE BACKGROUND) ================= */}
-      {/* <div
-        className="
-          hidden md:block
-          absolute inset-x-0
-          top-[560px]
-          lg:top-[640px]
-          h-[420px]
-          pointer-events-none
-          z-0
-        "
-      >
-        <ComputersCanvas /> */}
-
-        {/* Soft fade */}
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-transparent" />
-      </div> */}
-
-      {/* Desktop-only spacing reservation */}
-      {/* <div className="hidden md:block h-[460px]" /> */}
-
     </section>
   );
 };

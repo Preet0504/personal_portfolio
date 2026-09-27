@@ -1,42 +1,23 @@
-import React, { useRef, useState, lazy, Suspense } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Typewriter from "typewriter-effect";
-import { useInView } from "react-intersection-observer";
-
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-
-const EarthCanvas = lazy(() => import("./canvas/Earth"));
+import Section from "./ui/Section";
+import { socials } from "../data/nav";
 
 const Contact = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
   const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    setStatus(null);
 
     const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
     const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
@@ -44,7 +25,7 @@ const Contact = () => {
 
     if (!serviceId || !templateId || !publicKey) {
       setLoading(false);
-      alert("Email service is not configured. Please contact the site owner directly.");
+      setStatus({ ok: false, msg: `Email isn't configured — reach me directly at ${socials.email}.` });
       return;
     }
 
@@ -56,7 +37,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Preet Patel",
           from_email: form.email,
-          to_email: "preetpatelworks@gmail.com",
+          to_email: socials.email,
           message: form.message,
         },
         publicKey
@@ -64,131 +45,101 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+          setStatus({ ok: true, msg: "Thanks — I'll get back to you soon." });
+          setForm({ name: "", email: "", message: "" });
         },
-        (error) => {
+        () => {
           setLoading(false);
-          if (import.meta.env.DEV) {
-            console.error(error);
-          }
-
-          alert("Ahh, something went wrong. Please try again.");
+          setStatus({ ok: false, msg: "Something went wrong. Try again, or email me directly." });
         }
       );
   };
 
   return (
-    <div
-      ref={ref}
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden relative z-0`}
+    <Section
+      id="contact"
+      eyebrow="Get in touch"
+      title="Let's build something"
+      subtitle="Open to AI/software engineering roles — new grad and internship. The fastest way to reach me is email."
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 hover:border-purple-500/60 p-8 rounded-2xl w-full transition-all relative z-10'
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>
-          {inView ? (
-            <Typewriter
-              options={{
-                strings: ["Contact."],
-                autoStart: true,
-                loop: true,
-                cursor: "_",
-                delay: 100,
-                wrapperClassName: "text-white",
-              }}
+      <div className="grid md:grid-cols-5 gap-8">
+        <form ref={formRef} onSubmit={handleSubmit} className="md:col-span-3 flex flex-col gap-5">
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium text-white">Name</span>
+            <input
+              type="text"
+              name="name"
+              required
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Your name"
+              className="rounded-lg border border-border bg-surface/60 px-4 py-3 text-sm text-white placeholder:text-muted/60 outline-none focus:border-accent transition-colors"
             />
-          ) : (
-            <span className="opacity-0">Contact.</span>
-          )}
-        </h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col group'>
-            <span className='text-white font-medium mb-4 group-focus-within:text-purple-400 transition-colors'>Your Name</span>
-            <div className='relative'>
-              <div className='absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-0 group-focus-within:opacity-30 transition duration-500'></div>
-              <input
-                type='text'
-                name='name'
-                value={form.name}
-                onChange={handleChange}
-                placeholder="What's your name?"
-                className='relative w-full bg-black/40 backdrop-blur-xl py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-white/10 focus:border-purple-500/50 transition-all font-medium'
-              />
-            </div>
           </label>
-          <label className='flex flex-col group'>
-            <span className='text-white font-medium mb-4 group-focus-within:text-purple-400 transition-colors'>Your email</span>
-            <div className='relative'>
-              <div className='absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-0 group-focus-within:opacity-30 transition duration-500'></div>
-              <input
-                type='email'
-                name='email'
-                value={form.email}
-                onChange={handleChange}
-                placeholder="What's your email address?"
-                className='relative w-full bg-black/40 backdrop-blur-xl py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-white/10 focus:border-purple-500/50 transition-all font-medium'
-              />
-            </div>
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium text-white">Email</span>
+            <input
+              type="email"
+              name="email"
+              required
+              value={form.email}
+              onChange={handleChange}
+              placeholder="you@company.com"
+              className="rounded-lg border border-border bg-surface/60 px-4 py-3 text-sm text-white placeholder:text-muted/60 outline-none focus:border-accent transition-colors"
+            />
           </label>
-          <label className='flex flex-col group'>
-            <span className='text-white font-medium mb-4 group-focus-within:text-purple-400 transition-colors'>Your Message</span>
-            <div className='relative'>
-              <div className='absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-0 group-focus-within:opacity-30 transition duration-500'></div>
-              <textarea
-                rows={7}
-                name='message'
-                value={form.message}
-                onChange={handleChange}
-                placeholder='What do you want to say?'
-                className='relative w-full bg-black/40 backdrop-blur-xl py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border border-white/10 focus:border-purple-500/50 transition-all font-medium resize-none'
-              />
-            </div>
+          <label className="flex flex-col gap-2">
+            <span className="text-sm font-medium text-white">Message</span>
+            <textarea
+              rows={5}
+              name="message"
+              required
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What are you working on?"
+              className="rounded-lg border border-border bg-surface/60 px-4 py-3 text-sm text-white placeholder:text-muted/60 outline-none focus:border-accent transition-colors resize-none"
+            />
           </label>
-
           <button
-            type='submit'
-            className='relative group/btn overflow-hidden bg-gradient-to-r from-purple-600 to-pink-600 py-3 px-10 rounded-xl outline-none w-fit text-white font-bold shadow-[0_0_20px_rgba(145,94,255,0.3)] hover:shadow-[0_0_30px_rgba(145,94,255,0.5)] transition-all active:scale-95'
+            type="submit"
+            disabled={loading}
+            className="w-fit rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent/90 transition-colors disabled:opacity-60"
           >
-            <span className='relative z-10 flex items-center gap-2'>
-              {loading ? "Sending..." : "Send Message"}
-              {!loading && (
-                <svg className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M14 5l7 7m0 0l-7 7m7-7H3' />
-                </svg>
-              )}
-            </span>
-            <div className='absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300'></div>
+            {loading ? "Sending…" : "Send message"}
           </button>
+          {status && (
+            <p className={`text-sm ${status.ok ? "text-accent-2" : "text-red-400"}`}>{status.msg}</p>
+          )}
         </form>
-      </motion.div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <Suspense fallback={
-          <div className="w-full h-full flex items-center justify-center bg-primary rounded-2xl">
-            <div className="text-white">Loading...</div>
-          </div>
-        }>
-          <EarthCanvas />
-        </Suspense>
-      </motion.div>
-    </div>
+        <div className="md:col-span-2 rounded-2xl border border-border bg-surface/60 p-6 h-fit">
+          <p className="font-mono text-xs uppercase tracking-wider text-accent-2 mb-4">Direct</p>
+          <ul className="space-y-3 text-sm">
+            <li>
+              <a href={`mailto:${socials.email}`} className="text-white hover:text-accent-2 transition-colors">
+                {socials.email}
+              </a>
+            </li>
+            <li>
+              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href={socials.resume} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white transition-colors">
+                Résumé (PDF)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </Section>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;
