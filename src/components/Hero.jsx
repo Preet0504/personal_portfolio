@@ -15,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className={styles.eyebrow}
         >
-          Preet Patel — AI Software Engineer
+          Preet Patel, AI Software Engineer
         </motion.p>
 
         <motion.h1
@@ -37,7 +37,7 @@ const Hero = () => {
           MS Computer Science student at UIC. I've shipped a governance layer
           for AI coding agents backed by formal model checking, benchmarked a
           LAN video server against HLS/DASH/WebRTC, and contributed real
-          async infrastructure to Zulip's open-source codebase — alongside
+          async infrastructure to Zulip's open-source codebase, alongside
           production web apps that real users log into every day.
         </motion.p>
 
@@ -60,7 +60,7 @@ const Hero = () => {
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl border-t border-border pt-8"
         >
           {[
-            ["18+", "shipped projects"],
+            ["19+", "shipped projects"],
             ["1", "PyPI package"],
             ["1", "IEEE publication"],
             ["2026", "MS CS @ UIC"],

@@ -1,4 +1,4 @@
-// Generic renderer for a project's `sections` array — keeps ProjectDetail
+// Generic renderer for a project's `sections` array, keeps ProjectDetail
 // free of one-off components per project.
 const ProjectSection = ({ section }) => {
   const { heading, paragraphs, paragraphs2, list, table } = section;
@@ -63,7 +63,7 @@ const ProjectSection = ({ section }) => {
                   {isObj ? (
                     <>
                       <span className="font-semibold text-white">{item.title}</span>
-                      {item.detail ? <> — {item.detail}</> : null}
+                      {item.detail ? <>: {item.detail}</> : null}
                     </>
                   ) : (
                     item

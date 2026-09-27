@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="border-t border-border">
     <div className="max-w-content mx-auto px-6 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p className="font-mono text-xs text-muted">
-        © {new Date().getFullYear()} Preet Patel — built from scratch, no template.
+        © {new Date().getFullYear()} Preet Patel. Built from scratch, no template.
       </p>
       <div className="flex items-center gap-6 text-sm text-muted">
         <Link to="/projects" className="hover:text-white transition-colors">

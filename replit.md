@@ -1,14 +1,14 @@
-# Preet Patel — Portfolio
+# Preet Patel, Portfolio
 
 ## Overview
-A multi-page developer portfolio built with React, React Router, and Tailwind CSS. Every major project gets its own case-study page — architecture, real benchmark numbers, and honest limitations — rather than a single scrolling résumé page.
+A multi-page developer portfolio built with React, React Router, and Tailwind CSS. Every major project gets its own case-study page: architecture, real benchmark numbers, and honest limitations, rather than a single scrolling resume page.
 
 ## Tech Stack
 - **Frontend Framework**: React 18
 - **Routing**: React Router (client-side, multi-page)
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS
-- **Animation**: Framer Motion (scroll-triggered fade-ins only — no 3D/canvas)
+- **Animation**: Framer Motion (scroll-triggered fade-ins only, no 3D/canvas)
 - **Email Service**: EmailJS
 
 ## Project Structure
@@ -22,19 +22,19 @@ src/
 ```
 
 ## Content model
-`src/data/projects.js` is the source of truth: 17 projects in reverse-chronological
+`src/data/projects.js` is the source of truth: 19 projects in reverse-chronological
 order, each with `tagline`, `metrics`, `tags`, `links`, and a generic `sections`
 array (paragraphs / lists / tables) rendered by `ProjectSection.jsx`. Adding a
-project means adding one object to that file — no new components required.
+project means adding one object to that file, no new components required.
 
 ## Pages
-- `/` — hero, about, featured projects, experience, open-source contribution,
+- `/`: hero, about, featured projects, experience, open-source contribution,
   education, skills, publications, certifications, volunteering, contact.
-- `/projects` — all projects, filterable by category.
-- `/projects/:slug` — full case study for one project, with prev/next nav.
+- `/projects`: all projects, filterable by category.
+- `/projects/:slug`: full case study for one project, with prev/next nav.
 
 ## Design
-Dark theme, Inter + JetBrains Mono, indigo/cyan accent. No 3D — earlier
+Dark theme, Inter + JetBrains Mono, indigo/cyan accent. No 3D. Earlier
 revisions of this site used Three.js/React Three Fiber for a hero scene and
 starfield background; those were removed in favor of a faster, more
 professional static-content design suited to technical case studies.

@@ -25,7 +25,7 @@ const Contact = () => {
 
     if (!serviceId || !templateId || !publicKey) {
       setLoading(false);
-      setStatus({ ok: false, msg: `Email isn't configured — reach me directly at ${socials.email}.` });
+      setStatus({ ok: false, msg: `Email isn't configured. Reach me directly at ${socials.email}.` });
       return;
     }
 
@@ -45,7 +45,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          setStatus({ ok: true, msg: "Thanks — I'll get back to you soon." });
+          setStatus({ ok: true, msg: "Thanks. I'll get back to you soon." });
           setForm({ name: "", email: "", message: "" });
         },
         () => {
@@ -60,7 +60,7 @@ const Contact = () => {
       id="contact"
       eyebrow="Get in touch"
       title="Let's build something"
-      subtitle="Open to AI/software engineering roles — new grad and internship. The fastest way to reach me is email."
+      subtitle="Open to AI/software engineering roles, new grad and internship. The fastest way to reach me is email."
     >
       <div className="grid md:grid-cols-5 gap-8">
         <form ref={formRef} onSubmit={handleSubmit} className="md:col-span-3 flex flex-col gap-5">

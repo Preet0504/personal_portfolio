@@ -23,7 +23,7 @@ const About = () => (
           honestly what's built versus scaffolded, back claims with numbers
           instead of adjectives, and separate what a deterministic system can
           prove from what an LLM merely explains. A few of these projects say
-          so explicitly in their own READMEs — I've kept that honesty in the
+          so explicitly in their own READMEs. I've kept that honesty in the
           write-ups below rather than polishing it away.
         </p>
       </div>

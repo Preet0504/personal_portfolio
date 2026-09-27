@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Section, { fadeUp } from "./ui/Section";
 import education from "../data/education";
 
@@ -20,6 +21,15 @@ const Education = () => (
           </div>
           <p className="text-sm text-accent-2 mt-1">{ed.institution}</p>
           <p className="text-sm text-muted mt-3 leading-relaxed">{ed.description}</p>
+          {ed.thesis && (
+            <Link
+              to={`/projects/${ed.thesis.slug}`}
+              className="mt-4 block rounded-lg border border-border bg-white/[0.03] p-3 hover:border-accent/40 transition-colors"
+            >
+              <p className="text-xs font-semibold text-accent-2">{ed.thesis.label}</p>
+              <p className="text-xs text-muted mt-1 leading-relaxed">{ed.thesis.detail}</p>
+            </Link>
+          )}
         </motion.div>
       ))}
     </div>

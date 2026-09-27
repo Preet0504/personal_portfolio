@@ -13,7 +13,7 @@ const OpenSource = () => (
     >
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <h3 className="text-xl font-bold text-white">
-          {os.name} <span className="text-muted font-normal">— {os.role}</span>
+          {os.name} <span className="text-muted font-normal">({os.role})</span>
         </h3>
         <span className="font-mono text-xs text-muted">{os.period}</span>
       </div>

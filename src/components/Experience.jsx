@@ -1,9 +1,28 @@
 import { motion } from "framer-motion";
 import Section, { fadeUp } from "./ui/Section";
 import experience from "../data/experience";
+import { socials } from "../data/nav";
 
 const Experience = () => (
-  <Section id="experience" eyebrow="Experience" title="Where I've worked">
+  <Section
+    id="experience"
+    eyebrow="Experience"
+    title="Where I've worked"
+    subtitle={
+      <>
+        Full history, references, and recommendations on{" "}
+        <a
+          href={socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent-2 hover:text-white transition-colors"
+        >
+          LinkedIn
+        </a>
+        .
+      </>
+    }
+  >
     <div className="relative border-l border-border pl-8 space-y-10">
       {experience.map((job, i) => (
         <motion.div
